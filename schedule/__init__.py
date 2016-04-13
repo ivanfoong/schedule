@@ -123,7 +123,7 @@ class Job(object):
     """A periodic job as used by `Scheduler`."""
     def __init__(self, interval, quiet=False):
         self.interval = interval  # pause interval * unit between runs
-        self.quiet = False  # Suppress logging job runs, if true
+        self.quiet = quiet  # Suppress logging job runs, if true
         self.job_func = None  # the job job_func to run
         self.unit = None  # time units, e.g. 'minutes', 'hours', ...
         self.at_time = None  # optional time at which this job runs
